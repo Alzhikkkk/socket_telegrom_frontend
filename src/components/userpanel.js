@@ -17,7 +17,7 @@ function UserPanel(props) {
        props.getUserByIdAction({
         id:localStorage.getItem('user_id')
        })
-  },[])
+  },[localStorage.getItem('user_id')])
 
   useEffect(()=>{
     setUsers(props.user);
