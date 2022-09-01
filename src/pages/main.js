@@ -29,10 +29,13 @@ function Main() {
         setCurrentChat(chat);
       };
     return (
+        localStorage.getItem('token') ? 
         <div className="main">
             <Panel changeChat={handleChatChange}></Panel>
             <MessagePanel currentChat={currentChat} socket={socket}></MessagePanel>
         </div>
+        :
+       <div></div>
     );
 }
 

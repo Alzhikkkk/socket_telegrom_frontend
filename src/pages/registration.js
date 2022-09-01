@@ -60,16 +60,16 @@ function Register(children){
         navigate('/login') 
     }
 
-    useEffect(() => {
-        if(!children.loading) {
-            setEmail("")
-            setFullName("")
-            setNickname("")
-            setPassword("")
-            setPassword1("")
-            setImg(null)
-        } 
-    }, [children.loading])
+    // useEffect(() => {
+    //     if(!children.loading) {
+    //         setEmail("")
+    //         setFullName("")
+    //         setNickname("")
+    //         setPassword("")
+    //         setPassword1("")
+    //         // setImg(null)
+    //     } 
+    // }, [children.loading])
 
     return (
         <section className="container page">
