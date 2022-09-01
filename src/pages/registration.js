@@ -51,12 +51,6 @@ function Register(children){
             password1:password1,
             avatar:img
         })
-        setEmail("")
-        setFullName("")
-        setNickname("")
-        setPassword("")
-        setPassword1("")
-        setImg(null) 
         navigate('/login') 
     }
 
