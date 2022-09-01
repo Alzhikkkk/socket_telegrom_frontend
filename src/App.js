@@ -1,24 +1,24 @@
-import logo from './logo.svg';
-import './App.css';
+import { Routes, Route, useLocation} from "react-router-dom";
+import {Provider} from 'react-redux'
+import Main from "./pages/main";
+import Login from "./pages/login";
+import configureStore from './store';
+import Registration from "./pages/registration";
+import io from "socket.io-client";
+const socket = io.connect('http://localhost:3010/')
 
+const store = configureStore()
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Provider store={store}>
+      <div className="App">
+          <Routes>
+                <Route path='/' element={<Main/>}/>
+                <Route path='/login' element={<Login/>}/>
+                <Route path='/registration' element={<Registration />}/>
+          </Routes>
+      </div>
+    </Provider>
   );
 }
 
