@@ -5,7 +5,7 @@ import Login from "./pages/login";
 import configureStore from './store';
 import Registration from "./pages/registration";
 import io from "socket.io-client";
-const socket = io.connect('http://localhost:3010/')
+const socket = io.connect('http://apitelegram.alzhik.site/')
 
 const store = configureStore()
 function App() {
