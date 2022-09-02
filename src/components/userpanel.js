@@ -36,6 +36,7 @@ function UserPanel(props) {
       <div className="user">
          <div className="user-panel">
            {users.map((element, index)=>{
+            
             const img = require(`../img/avatar${element.avatar}`);
             return(
               <span className="user-info" key={index} onClick={() => changeCurrentChat(index, element)}>

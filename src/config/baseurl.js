@@ -1,1 +1,1 @@
-export const BASE_URL='http://apitelegram.alzhik.site'
+export const BASE_URL='https://apitelegram.alzhik.site'
